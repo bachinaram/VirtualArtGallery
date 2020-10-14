@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <link rel="stylesheet" href="assets/cssFiles/main.css" />
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        //below asset image id is used in respective area tag
+        //e.g., id=GalFloor is used in a-plane tag
+        <img
+          id="GalFloor"
+          src="assets/images/gallery_floor.jpg"
+        />
+        <img
+          id="GalSideWall"
+          src="assets/images/gallery_side_wall.jpg"
+        />
+      </a-assets>
+      //front door
+      <a-box position="0 2.5 -4.6" rotation="90 90 0"  depth="5" height="5.8" width="0.2" color="red"></a-box>
+      //right wall
+      <a-box position="3 2.5 -7" rotation="0 360 0"  depth="5" height="5" width="0.2" color="#336699">
+        
+      </a-box>
+      //left wall
+      <a-box position="-3 2.5 -7" rotation="360 0 0"  depth="5" height="5" width="0.2" color="#336699"></a-box>
+      //ceiling
+      <a-box position="0 4.9 -7" rotation="0 0 90"  depth="5" height="5.8" width="0.2" color="#4080bf"></a-box>
+      
+      <a-plane
+        material="src: #GalFloor; repeat: 15 15"
+        rotation="-90 0 0"
+        position="0 -0.01 0"
+        height="100"
+        width="100"
+      ></a-plane>
+
+<!--
+        <a-plane
+        material="src: #GalFloor; repeat: 15 15"
+        rotation="-90 0 0"
+        position="0 -0.01 0"
+        height="100"
+        width="100"
+      ></a-plane>
+      color: linear-gradient(to bottom left, #6666ff 0%, #33cccc 100%);
+-->
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
