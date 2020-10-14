@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="GalFloor"
+          src="assets/images/gallery_floor.jpg"
+        />
+      </a-assets>
+      <a-plane
+        material="src: #GalFloor; repeat: 15 15"
+        rotation="-90 0 0"
+        position="0 -0.01 0"
+        height="100"
+        width="100"
+      ></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
