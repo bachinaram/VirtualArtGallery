@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <link rel="stylesheet" href="assets/cssFiles/main.css" />
+</head>
+
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img id="floor" src="assets/images/gallery_floor.jpg" />
+        </a-assets>
+
+
+        <a-box color="#FFFFFFF" src="#floor" repeat="1 1 " normal-map="#floor" normal-scale="1 -1 " roughness="0.98 " width="6 " height="4 " depth="10 " position="2 1.5 -9 " scale="-1 1 1" side="back">
+        </a-box>
+
+        <a-plane color="red" position="-0.9 1.5 -9" rotation="0 90 0" width="2 " height="2 ">
+        </a-plane>
+        <a-plane color="red" position="-0.9 1.5 -6" rotation="0 90 0" width="2 " height="2 ">
+        </a-plane>
+        <a-plane color="red" position="-0.9 1.5 -12 " rotation="0 90 0" width="2 " height="2 ">
+        </a-plane>
+
+        <a-plane color="red" position="4.9 1.5 -9" rotation="0 -90 0" width="2 " height="2 ">
+        </a-plane>
+        <a-plane color="red" position="4.9 1.5 -6" rotation="0 -90 0" width="2 " height="2 ">
+        </a-plane>
+        <a-plane color="red" position="4.9 1.5 -12 " rotation="0 -90 0" width="2 " height="2 ">
+        </a-plane>
+
+        <a-sky color="#FFFFFFF "></a-sky>
+
+    </a-scene>
+</body>
+
+</html>
