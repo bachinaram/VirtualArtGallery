@@ -2,7 +2,6 @@
 
 <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <link rel="stylesheet" href="assets/cssFiles/main.css" />
 </head>
 
 <body>
@@ -10,24 +9,30 @@
 
         <a-assets>
             <img id="floor" src="assets/images/gallery_floor.jpg" />
+            <img id="paint1" src="assets/images/paint1.jpg"/>
+            <img id="paint2" src="assets/images/paint2.jpg"/>
+            <img id="paint3" src="assets/images/paint3.jpg"/>
+            <img id="paint4" src="assets/images/paint4.jpg"/>
+            <img id="paint5" src="assets/images/paint5.jpg"/>
+            <img id="paint6" src="assets/images/paint6.jpg"/>
         </a-assets>
 
 
         <a-box color="#FFFFFFF" src="#floor" repeat="1 1 " normal-map="#floor" normal-scale="1 -1 " roughness="0.98 " width="6 " height="4 " depth="10 " position="2 1.5 -9 " scale="-1 1 1" side="back">
         </a-box>
 
-        <a-plane color="red" position="-0.9 1.5 -9" rotation="0 90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint1" position="-0.9 1.5 -9" rotation="0 90 0" width="2 " height="2 ">
         </a-plane>
-        <a-plane color="red" position="-0.9 1.5 -6" rotation="0 90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint2" position="-0.9 1.5 -6" rotation="0 90 0" width="2 " height="2 ">
         </a-plane>
-        <a-plane color="red" position="-0.9 1.5 -12 " rotation="0 90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint3" position="-0.9 1.5 -12 " rotation="0 90 0" width="2 " height="2 ">
         </a-plane>
 
-        <a-plane color="red" position="4.9 1.5 -9" rotation="0 -90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint4" position="4.9 1.5 -9" rotation="0 -90 0" width="2 " height="2 ">
         </a-plane>
-        <a-plane color="red" position="4.9 1.5 -6" rotation="0 -90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint5" position="4.9 1.5 -6" rotation="0 -90 0" width="2 " height="2 ">
         </a-plane>
-        <a-plane color="red" position="4.9 1.5 -12 " rotation="0 -90 0" width="2 " height="2 ">
+        <a-plane color="red" material="src: #paint6" position="4.9 1.5 -12 " rotation="0 -90 0" width="2 " height="2 ">
         </a-plane>
 
         <a-sky color="#FFFFFFF "></a-sky>
