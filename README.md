@@ -1,5 +1,12 @@
 # SSD8 - Virtual Art Gallery
 
+Main Functionalities to implement
+a. function to create http json query method to hit pathgen and get results of it
+b. recursive program to implement walls and 
+c. function to display images on planes from array of images
+
+
+
 # VirtualArtGallery
 
 1. 01/10/2020 - Initial notes about project from Sai Anirudh, documented it in VirtualArtGalery_Startup.docx
