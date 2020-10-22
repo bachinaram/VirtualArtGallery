@@ -23,3 +23,7 @@ c. function to display images on planes from array of images
 
 7. 15/10/2020 - I have added 6 images to my repo main and room_v1.0.
                 I also took planes concept to my repo and displayed planes and images on top of it
+8. 20/10/2020 - Testing room component
+9. 22/10/2020 - created new pull request to merge the js changes to fetch positional x,y(constant),z of camera view
+                
+     
