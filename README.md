@@ -25,5 +25,25 @@ c. function to display images on planes from array of images
                 I also took planes concept to my repo and displayed planes and images on top of it
 8. 20/10/2020 - Testing room component
 9. 22/10/2020 - created new pull request to merge the js changes to fetch positional x,y(constant),z of camera view
+10. 23/10/2020 -  faced cors issue with raghav shared api and handled the issue from client side by 
+                    allowing all access-control-allow-headers
+11. 24/10/2020 - Team is had internal discussion about project status
+12. 25/10/2020 - Raghav fixed cors problem from server-side
+13. 26/10/2020 - Mentor asked for individual contributions and roles towards the projects
+14. 26/10/2020 - Internal team project discussion about status             
+                **RaviKumar Nandigam**
+                Home page, exit strategy and UI designing
+                **Shubham Swetank**
+                Images and planes inside left and right wall looping
+                Exploring and better design of room component.
+                Testing
+                **Ram Pratap Bachina and Rithvik Garg**
+                Initial design of room, implementation of 3d and Working with restApi
+                Backend integration, Path creations and implementations
+                Testing
+
+15. 29/10/2020 - Discussion with mentor regarding the api usage
+16. 30/10/2020 - Internal team discussion for mid evaluation of project we need to prepare current stage 
+                    of project preparation and youtube video link 
                 
      
