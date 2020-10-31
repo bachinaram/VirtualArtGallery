@@ -27,30 +27,5 @@ AFRAME.registerComponent('rotation-reader', {
   }
 });
 
-//this function is called recursively once it reaches end of room,
-//and it returns new values of x,z position and beta wrt y rotation
-//
-function getValuesFromPathGen(myPosition_x,myPosition_z,myBeta,myLength){
-  var new_x_point,new_z_point,new_beta_point
-  var apiJson={}
-  const req = new XMLHttpRequest();
-  req.responseType = 'json';
-  var myUrl = `http://pathgen.herokuapp.com/newpoint?x=${myPosition_x}&z=${myPosition_z}&beta=${myBeta}&length=1.23&gennewbeta=1`
-  //req.open('GET', 'http://pathgen.herokuapp.com/newpoint?x=0.2&z=1.3&beta=3.132&length=1.23&gennewbeta=1');
-  req.open('GET', myUrl, true);
-  apiJson = req.onload = () => {
-    apiJson = req.response;
-    console.log(apiJson)
-    //console.log(apiJson)
-    /*new_beta_point = apiJson.new_beta;
-    new_x_point = apiJson.new_point[0];
-    new_z_point = apiJson.new_point[1];
-    return {
-      new_x_point,
-      new_z_point,
-      new_beta_point
-    };*/
-  };
-  req.send();
-}
+/
 
