@@ -1,5 +1,3 @@
-
-
 AFRAME.registerComponent('rotation-reader', {
   tick: function () {
 
@@ -13,8 +11,9 @@ AFRAME.registerComponent('rotation-reader', {
     camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7.2
     //console.log(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
     if(((myStartPosition_x<camera_right_x)&&(myStartPosition_x>camera_left_x)) && (myStartPosition_z<camera_forward_z)){
-      var new_values = getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
-      console.log(new_values)
+      getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
+      //var new_values = getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
+      //console.log(new_values)
       //new_position_x=new_values.new_x_point
       //console.log(new_position_x)
       //new_position_z=new_values.new_z_point
@@ -36,21 +35,28 @@ function getValuesFromPathGen(myPosition_x,myPosition_z,myBeta,myLength){
   const req = new XMLHttpRequest();
   req.responseType = 'json';
   var myUrl = `http://pathgen.herokuapp.com/newpoint?x=${myPosition_x}&z=${myPosition_z}&beta=${myBeta}&length=1.23&gennewbeta=1`
-  //req.open('GET', 'http://pathgen.herokuapp.com/newpoint?x=0.2&z=1.3&beta=3.132&length=1.23&gennewbeta=1');
   req.open('GET', myUrl, true);
-  apiJson = req.onload = () => {
+  req.onload = () => {
     apiJson = req.response;
-    console.log(apiJson)
-    //console.log(apiJson)
-    /*new_beta_point = apiJson.new_beta;
-    new_x_point = apiJson.new_point[0];
-    new_z_point = apiJson.new_point[1];
+    newValueUsageFun(apiJson)
+  };
+  req.send();
+}
+
+
+
+function newValueUsageFun(apiJson){
+  //console.log(apiJson)
+  new_beta_point = apiJson.new_beta;
+  new_x_point = apiJson.new_point[0];
+  new_z_point = apiJson.new_point[1];
+  console.log(new_x_point,new_z_point,new_beta_point)
+}
+
+
+    /* return code for function
     return {
       new_x_point,
       new_z_point,
       new_beta_point
     };*/
-  };
-  req.send();
-}
-
