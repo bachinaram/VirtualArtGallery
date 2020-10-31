@@ -1,5 +1,3 @@
-
-
 AFRAME.registerComponent('rotation-reader', {
   tick: function () {
 
@@ -13,8 +11,9 @@ AFRAME.registerComponent('rotation-reader', {
     camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7.2
     //console.log(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
     if(((myStartPosition_x<camera_right_x)&&(myStartPosition_x>camera_left_x)) && (myStartPosition_z<camera_forward_z)){
-      var new_values = getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
-      console.log(new_values)
+      getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
+      //var new_values = getValuesFromPathGen(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
+      //console.log(new_values)
       //new_position_x=new_values.new_x_point
       //console.log(new_position_x)
       //new_position_z=new_values.new_z_point
@@ -27,5 +26,19 @@ AFRAME.registerComponent('rotation-reader', {
   }
 });
 
-/
-
+//this function is called recursively once it reaches end of room,
+//and it returns new values of x,z position and beta wrt y rotation
+//
+function getValuesFromPathGen(myPosition_x,myPosition_z,myBeta,myLength){
+  var new_x_point,new_z_point,new_beta_point
+  var apiJson={}
+  const req = new XMLHttpRequest();
+  req.responseType = 'json';
+  var myUrl = `http://pathgen.herokuapp.com/newpoint?x=${myPosition_x}&z=${myPosition_z}&beta=${myBeta}&length=1.23&gennewbeta=1`
+  req.open('GET', myUrl, true);
+  req.onload = () => {
+    apiJson = req.response;
+    newValueUsageFun(apiJson)
+  };
+  req.send();
+}
