@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <!--below asset image id is used in respective area tag
+        //e.g., id=GalFloor is used in a-plane tag-->
+            <img id="GalFloor" src="assets/images/gallery_floor.jpg" />
+            <img id="CityBg" src="assets/images/city-sky.jpg" />
+            <img id="Ground" src="assets/images/tiles.jpg" />
+            <img id="paint1" src="assets/images/paint1.jpg" />
+            <img id="paint2" src="assets/images/paint2.jpg" />
+            <img id="paint3" src="assets/images/paint3.jpg" />
+            <img id="paint4" src="assets/images/paint4.jpg" />
+            <img id="paint5" src="assets/images/paint5.jpg" />
+            <img id="paint6" src="assets/images/paint6.jpg" />
+            <img id="paint6" src="assets/images/paint6.jpg" />
+        </a-assets>
+
+        <!-- http://pathgen.herokuapp.com/newpoint?x=3&z=-7.3&beta=0.523599&length=6&gennewbeta=1 -->
+        <a-plane position="3 2.5 -7" rotation="0 90 0" height="6" width="6" color="blue" side="double"></a-plane>
+        <a-plane position="-3 2.5 -7" rotation="0 90 0" height="6" width="6" color="green" side="double"></a-plane>
+        <a-plane position="0 5.5 -7" rotation="-90 0 0" height="6" width="6" color="red" side="double"></a-plane>
+
+        <a-plane position="8.946554438948 2.5 -6.500944116705323" rotation="0 60 0" height="6" width="6" color="white" side="double"></a-plane>
+
+
+
+        <!-- BOX 1 -->
+        <!-- //right wall -->
+        <!-- <a-box position="3 2.5 -7" rotation="0 0 0" depth="5" height="5" width="0.5" color="#004d80"></a-box> -->
+        <!--left wall-->
+        <!-- <a-box position="-3 2.5 -7" rotation="0 0 0" depth="5" height="5" width="0.5" color="#004d80"></a-box>
+        <a-plane material="src: #paint1" color="white" position="-2.73 2.3 -5" rotation="0 90 0" width="1" height="1"></a-plane>
+        <a-plane material="src: #paint2" color="white" position="-2.73 2.3 -7" rotation="0 90 0" width="1" height="1"></a-plane>
+        <a-plane material="src: #paint3" color="white" position="-2.73 2.3 -9" rotation="0 90 0" width="1" height="1"></a-plane>
+        <a-plane material="src: #paint4" color="white" position="2.73 2.3 -5" rotation="0 -90 0" width="1 " height="1"></a-plane>
+        <a-plane material="src: #paint5" color="white" position="2.73 2.3 -7" rotation="0 -90 0" width="1 " height="1"></a-plane>
+        <a-plane material="src: #paint6" color="white" position="2.73 2.3 -9" rotation="0 -90 0" width="1 " height="1"></a-plane> -->
+        <!--ceiling-->
+        <!-- <a-box position="0 4.75 -7" rotation="0 0 90" depth="5" height="5.6" width="0.5" color="#004d80"></a-box> -->
+
+        <!-- <a-box material="src: #GalFloor" position="0 0.15 -7" rotation="0 0 90" depth="5" height="5.5" width="0.5"></a-box> -->
+        <a-plane material="src: #Ground; repeat: 100 100" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100"></a-plane>
+        <a-sky material="src: #CityBg; repeat:5 " color="#ECECEC" theta-length=100></a-sky>
+    </a-scene>
+</body>
+
+</html>
