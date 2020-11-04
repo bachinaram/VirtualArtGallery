@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="home"src="assets/images/home.jpeg"/>
+      </a-assets>
+      <a-text value="Hello, World!" position="0 0 0" width='5'></a-text>
+      <a-sky material="src: #home">
+        <a-animation attribute="rotation"
+             dur="20000"
+             fill="forwards"
+             to="0 360 0"
+             repeat="indefinite"
+             easing="linear"
+             ></a-animation>
+        </a-animation>
+      </a-sky>
+    </a-scene>
+  </body>
+</html>
