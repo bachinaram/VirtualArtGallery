@@ -51,5 +51,4 @@ c. function to display images on planes from array of images
 17. 31/10/2020 - Internal team discussion for to test pathogen return values
 18. 03/11/2020 - Creation of home/start/welcome page for gallery home.html
 19. 04/11/2020 - adding audio and text to home page (designing)
-
      
