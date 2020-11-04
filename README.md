@@ -1,13 +1,16 @@
+**Which file to run first to start project**
+home.html
+
 # SSD8 - Virtual Art Gallery
 
 Main Functionalities to implement
-a. function to create http json query method to hit pathgen and get results of it
+a. function to create http json query method to hit pathogen and get results of it
 b. recursive program to implement walls and 
 c. function to display images on planes from array of images
 
 
 
-# VirtualArtGallery
+# VirtualArtGallery Progress status
 
 1. 01/10/2020 - Initial notes about project from Sai Anirudh, documented it in VirtualArtGalery_Startup.docx
 2. 10/10/2020 - Project outline document 
@@ -45,5 +48,8 @@ c. function to display images on planes from array of images
 15. 29/10/2020 - Discussion with mentor regarding the api usage
 16. 30/10/2020 - Internal team discussion for mid evaluation of project we need to prepare current stage 
                     of project preparation and youtube video link 
-                
+17. 31/10/2020 - Internal team discussion for to test pathogen return values
+18. 03/11/2020 - Creation of home/start/welcome page for gallery home.html
+19. 04/11/2020 - adding audio and text to home page (designing)
+
      
