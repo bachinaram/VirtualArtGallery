@@ -1,23 +1,28 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="cssfiles/main.css">
   </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <img id="home"src="assets/images/home.jpeg"/>
-      </a-assets>
-      <a-text value="Hello, World!" position="0 0 0" width='5'></a-text>
-      <a-sky material="src: #home">
-        <a-animation attribute="rotation"
-             dur="20000"
-             fill="forwards"
-             to="0 360 0"
-             repeat="indefinite"
-             easing="linear"
-             ></a-animation>
-        </a-animation>
-      </a-sky>
-    </a-scene>
+  <body></body>
+    <div style="position:relative;">
+      <a-scene>
+        <a-assets>
+          <img id="home"src="assets/images/home.jpeg"/>
+        </a-assets>
+        <a-sky material="src: #home">
+          <a-animation attribute="rotation"
+               dur="30000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"
+               ></a-animation>
+          </a-animation>
+        </a-sky>
+      </a-scene>
+      <div style="position:absolute; top:40%; right:40%; z-index:1000;">
+        <input type="button" value="Virtual Art Tour" onclick="window.location.href='main.html'" class="btn"> 
+      </div>
+  </div>
   </body>
 </html>
