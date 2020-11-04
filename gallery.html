@@ -2,8 +2,11 @@
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="jsfiles/camera_view.js"></script>
+    <link rel="stylesheet" href="cssfiles/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div style="position:relative;">
     <a-scene>
       <!--<a-entity camera rotation-reader position="0 1.6 0"></a-entity>-->
         <a-camera id="camera" position="0 1.6 0" rotation-reader></a-camera>
@@ -57,5 +60,10 @@
       <a-plane material="src: #Ground; repeat: 100 100" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100" ></a-plane>
       <a-sky material="src: #CityBg; repeat:5 " color="#ECECEC" theta-length=100></a-sky>
     </a-scene>
+    <div style="position:absolute; top:60%; left:80%; z-index:1000;">
+      <input type="button" value="Exit Scene" onclick="window.location.href='home.html'" class="btnn">
+      <!--<img src="assets/images/portalexit.png" alt="Exit" width="70" height="70"> -->
+    </div>
+  </div>
   </body>
 </html>
