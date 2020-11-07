@@ -59,4 +59,10 @@ function newValueUsageFun(apiJson){
       new_x_point,
       new_z_point,
       new_beta_point
+
+            var i;
+      for (i = 0; i < 2; i++) {
+        myPosition_z = this.el.object3D.position.z
+        room()
+      } 
     };*/
