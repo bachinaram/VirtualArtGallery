@@ -42,3 +42,13 @@ function getValuesFromPathGen(myPosition_x,myPosition_z,myBeta,myLength){
   };
   req.send();
 }
+
+
+
+function newValueUsageFun(apiJson){
+  //console.log(apiJson)
+  new_beta_point = apiJson.new_beta;
+  new_x_point = apiJson.new_point[0];
+  new_z_point = apiJson.new_point[1];
+  console.log(new_x_point,new_z_point,new_beta_point)
+}
