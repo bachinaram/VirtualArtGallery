@@ -1,12 +1,5 @@
 AFRAME.registerComponent('foo', {
     init: function () {
-      imageList=[];
-        let j=1;
-        while(j<=6)
-         {  var a=`${j}.jpg`;
-          imageList.push(a);
-          j++;
-        }
       var i;
       var myZ=-7;
       var myPlane1Z=-9;
@@ -82,13 +75,12 @@ AFRAME.registerComponent('foo', {
 
     var entityEl = document.createElement('a-plane');
       
-      painting_no= Math.floor( Math.random() * imageList.length );
+      painting_no= Math.floor( Math.random() * 6);
       console.log(painting_no);
       console.log("hello");
-      
       var path=`assets/images/paint${painting_no}.jpg`;
       console.log(path);
-      entityEl.setAttribute('material',  {src: "url(assets/images/paint6.jpg)"});
+      entityEl.setAttribute('material',  {src: `url(${path})`});
       entityEl.setAttribute('position', {x: -2.73, y: 2.3, z: myPlane1Z});
       entityEl.setAttribute('rotation', {x: 0, y: 90, z: 0});
       entityEl.setAttribute('color', 'white');
