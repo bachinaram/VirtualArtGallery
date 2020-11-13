@@ -50,7 +50,9 @@ function newValueUsageFun(apiJson) {
     new_beta_point = apiJson.new_beta;
     new_x_point = apiJson.new_point[0];
     new_z_point = apiJson.new_point[1];
-    console.log(new_x_point, new_z_point, new_beta_point)
+    console.log(new_x_point, new_z_point, new_beta_point);
+    room(new_x_point, new_z_point, new_beta_point);
+    // room(myZ,myPlane1Z,myPlane2Z)
 }
 
 

@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- <script src="jsfiles/camera_view.js"></script> -->
+    <!-- <script src="jsfiles/dynamicScene.js"></script> -->
+    <link rel="stylesheet" href="cssfiles/home.css">
+</head>
+
+<body>
+    <div style="position:relative;">
+        <a-scene foo>
+            <!--<a-entity camera rotation-reader position="0 1.6 0"></a-entity>-->
+            <a-camera id="camera" position="0 2 0" rotation-reader></a-camera>
+
+            <a-assets>
+                <!--below asset image id is used in respective area tag
+        //e.g., id=GalFloor is used in a-plane tag-->
+                <img id="GalFloor" src="assets/images/gallery_floor.jpg" />
+                <img id="CityBg" src="assets/images/city-sky.jpg" />
+                <img id="Ground" src="assets/images/tiles.jpg" />
+                <img id="paint1" src="assets/images/paint1.jpg" />
+                <img id="paint2" src="assets/images/paint2.jpg" />
+                <img id="paint3" src="assets/images/paint3.jpg" />
+                <img id="paint4" src="assets/images/paint4.jpg" />
+                <img id="paint5" src="assets/images/paint5.jpg" />
+                <img id="paint6" src="assets/images/paint6.jpg" />
+                <img id="roof" src="assets/images/garden.jpg" />
+            </a-assets>
+
+            <!--right wall-->
+            <a-box position="3 2.5 -7" rotation="0 0 0" depth="8" height="5" width="0.5" color="#004d80"></a-box>
+            <!--left wall-->
+            <a-box position="-3 2.5 -7" rotation="0 0 0" depth="8" height="5" width="0.5" color="#004d80"></a-box>
+            <!--ceiling-->
+            <!-- <a-box position="0 4.75 -7" rotation="0 0 90" depth="8" height="5.6" width="0.5" color="#004d80"></a-box> -->
+            <!--floor-->
+            <!-- <a-box material="src: #GalFloor" position="0 0.15 -7" rotation="0 0 90" depth="2" height="5.5" width="0.5"></a-box> -->
+
+            <!--right wall-->
+            <a-box position="5.828439825 2.5 -13.828414425" rotation="0 -45 0" depth="8" height="5" width="0.5" color="red"></a-box>
+            <!--left wall-->
+            <a-box position="-0.171560175 2.5 -13.828414425" rotation="0 -45 0" depth="8" height="5" width="0.5" color="#004d80"></a-box>
+            <!--ceiling-->
+            <!-- <a-box position="2.828439825 4.75 -13.828414425" rotation="0 -45 90" depth="8" height="5" width="0.5" color="#004d80"></a-box> -->
+            <!--floor-->
+            <!-- <a-box material="src: #GalFloor" position="0.17430389646307043 0.15 -9" rotation="0 5 90" depth="2" height="5.5" width="0.5"></a-box> -->
+
+
+            <!-- <a-plane material="src: #paint1" color="white" position="-2.73 2.3 -5" rotation="0 90 0" width="1" height="1"></a-plane>
+            <a-plane material="src: #paint2" color="white" position="-2.73 2.3 -7" rotation="0 90 0" width="1" height="1"></a-plane>
+            <a-plane material="src: #paint3" color="white" position="-2.73 2.3 -9" rotation="0 90 0" width="1" height="1"></a-plane>
+            <a-plane material="src: #paint4" color="white" position="2.73 2.3 -5" rotation="0 -90 0" width="1 " height="1"></a-plane>
+            <a-plane material="src: #paint5" color="white" position="2.73 2.3 -7" rotation="0 -90 0" width="1 " height="1"></a-plane>
+            <a-plane material="src: #paint6" color="white" position="2.73 2.3 -9" rotation="0 -90 0" width="1 " height="1"></a-plane> -->
+            <!-- frontglass-->
+            <!-- <a-plane material="opacity: 0.4; transparent: true" rotation="360 0 0" position="0 2.45 -4" width="5.7" height="4.12" depth="6" color="white"></a-plane>
+            <a-plane material="opacity: 0.4; transparent: true;side: double" position="-1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
+            <a-plane material="opacity: 0.4; transparent: true;side: double" position="1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
+            <a-plane material="opacity: 0.4; transparent: true;side: double" position="0 3.7 -4" width="1.6" height="1.6" depth="1" color="white"></a-plane> -->
+            <a-plane material="src: #Ground; repeat: 100 100" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100"></a-plane>
+            <a-sky material="src: #CityBg; repeat:5 " color="#ECECEC" theta-length=100></a-sky>
+        </a-scene>
+    </div>
+</body>
+
+</html>
