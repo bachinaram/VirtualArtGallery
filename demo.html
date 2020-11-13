@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Demo</title>
+
+<script type="text/javascript">
+
+
+imageList=[];
+let i=0;
+while(i<10)
+ {	var a=`${i}.jpg`;
+	imageList.push(a);
+	i++;
+}
+    
+function getRandomImage(imgAr) {
+    var path ='assets/images/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" width="500" alt = "">';
+    document.write(imgStr); document.close();
+
+}   
+
+</script>
+</head>
+<body>
+    
+<h1>Display Random Image Using JavaScript</h1>
+
+<div>
+    <script type="text/javascript">getRandomImage(imageList)</script>
+</div>
+
+</body>
+</html>
