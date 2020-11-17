@@ -24,7 +24,8 @@ AFRAME.registerComponent('rotation-reader', {
 });
 
 
-function room(camera_forward_z,myPlane){
+function room(camera_forward_z,myPlane,block){
+  console.log(block);
   var sceneEl = document.querySelector('a-scene');
   //right wall
     var entityEl = document.createElement('a-box');
@@ -74,7 +75,19 @@ function room(camera_forward_z,myPlane){
     entityEl.setAttribute('scale', {x: 0.04, y: 0.04, z: 0.04});
     sceneEl.appendChild(entityEl);
     
+    //security blocker to left
+    var entityEl1 = document.createElement('a-entity');
+    entityEl1.setAttribute('gltf-model', "url(assets/images/gltf/fence/scene.gltf)");
+    entityEl1.setAttribute('scale', {x: 0.1, y: 0.2, z: 0.2});
+    entityEl1.setAttribute('position', {x: -0.5, y: 0.6, z: camera_forward_z});
+    sceneEl.appendChild(entityEl1);
 
+    //security blocker to right
+    var entityEl2 = document.createElement('a-entity');
+    entityEl2.setAttribute('gltf-model', "url(assets/images/gltf/fence/scene.gltf)");
+    entityEl2.setAttribute('scale', {x: 0.1, y: 0.2, z: 0.2});
+    entityEl2.setAttribute('position', {x: 2.55, y:0.6, z: camera_forward_z});
+    sceneEl.appendChild(entityEl2);
 
     for(j=0;j<3;j++){
       myPlane=myPlane-2;
@@ -90,7 +103,7 @@ function room(camera_forward_z,myPlane){
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
       sceneEl.appendChild(entityEl);
-      console.log(j)
+      //console.log(j)
       //left lights
       var entityEl = document.createElement('a-entity');
       entityEl.setAttribute('gltf-model', "url(assets/images/gltf/wallight/wallight.gltf)");
