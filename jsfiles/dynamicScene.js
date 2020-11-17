@@ -1,6 +1,7 @@
 AFRAME.registerComponent('foo', {
   init: function () {
-    camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7.2
+    camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7
+    center_z=camera_forward_z/2;
     myPlane=-9;
   }
 });
@@ -29,7 +30,7 @@ function room(camera_forward_z,myPlane){
     var entityEl = document.createElement('a-box');
     entityEl.setAttribute('position', {x: 3, y: 2.5, z: camera_forward_z});
     entityEl.setAttribute('rotation', {x: 0, y: 360, z: 0});
-    entityEl.setAttribute('color', 'red');
+    entityEl.setAttribute('color', '#004d80');
     entityEl.setAttribute('width', '0.5');
     entityEl.setAttribute('height', '5');
     entityEl.setAttribute('depth', '6');
@@ -39,7 +40,7 @@ function room(camera_forward_z,myPlane){
     var entityEl = document.createElement('a-box');
     entityEl.setAttribute('position', {x: -3, y: 2.5, z: camera_forward_z});
     entityEl.setAttribute('rotation', {x: 360, y: 0, z: 0});
-    entityEl.setAttribute('color', 'red');
+    entityEl.setAttribute('color', '#004d80');
     entityEl.setAttribute('width', '0.5');
     entityEl.setAttribute('height', '5');
     entityEl.setAttribute('depth', '6');
@@ -49,7 +50,7 @@ function room(camera_forward_z,myPlane){
     var entityEl = document.createElement('a-box');
     entityEl.setAttribute('position', {x: 0, y: 4.75, z: camera_forward_z});
     entityEl.setAttribute('rotation', {x: 0, y: 0, z: 90});
-    entityEl.setAttribute('color', 'red');
+    entityEl.setAttribute('color', '#004d80');
     entityEl.setAttribute('width', '0.5');
     entityEl.setAttribute('height', '5.6');
     entityEl.setAttribute('depth', '6');
@@ -109,7 +110,7 @@ function room(camera_forward_z,myPlane){
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
       sceneEl.appendChild(entityEl);
-      console.log(j)
+      
       //right lights
       var entityEl = document.createElement('a-entity');
       entityEl.setAttribute('gltf-model', "url(assets/images/gltf/wallight/wallight.gltf)");
