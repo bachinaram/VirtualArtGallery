@@ -49,6 +49,26 @@ c. function to display images on planes from array of images
 16. 30/10/2020 - Internal team discussion for mid evaluation of project we need to prepare current stage 
                     of project preparation and youtube video link 
 17. 31/10/2020 - Internal team discussion for to test pathogen return values
-18. 03/11/2020 - Creation of home/start/welcome page for gallery home.html
-19. 04/11/2020 - adding audio and text to home page (designing)
-     
+18. 02/11/2020 - Internal team discussion about presentation preparation
+19. 02/11/2020 - Demo given to ravi to record youtube video
+20. 02/11/2020 - Ravi prepared the youtube video (https://youtu.be/Z2Xn_OIbCVE)
+21. 03/11/2020 - We have made some changes to presentation as per suggestion by Mentor Raghav
+22. 03/11/2020 - Mid presentations
+23. 03/11/2020 - Creation of home/start/welcome page for gallery home.html
+24. 04/11/2020 - adding audio and text to home page (designing)
+25. 07/11/2020 - Team had call with Raghav about project status
+26. 09/11/2020 - Team discussion at 10PM ist about tthe projects status and work tahtt was allotted
+27. 10/11/2020 - Team discussion at 10PM IST about tthe projects status and work that was allotted
+28. 11/11/2020 - Team discussion before we reply to raghav about project status
+
+    replied by Ritvik
+    Hi Raghav, here is the progress from our last meeting :
+tried the code for turned rooms with api returned values (for now - hard-coded values in html), giving descent result on placing wall at some angle..
+	written the pseudo code logic for auto room creation (for JS), working on it now..
+	also working on logic for looping images on wall.
+
+29. 13/11/2020 - Internal team discussion Shubham able to complete random image selection. We are able to insert images randomly in each plane.
+31. 13/11/2020 - Internal team discussion about status of everyone allocated activity
+32. 13/11/2020 - Dynamic room creation but the rooms are generating straight
+33. 14/11/2020 - Bug fixes to the plane entity insertion in each a-box room componentt
+34. 17/11/2020 - Dynamically able to adjust fences in each room
