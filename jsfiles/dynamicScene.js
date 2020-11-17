@@ -10,7 +10,6 @@ AFRAME.registerComponent('foo', {
 AFRAME.registerComponent('rotation-reader', {
   tick: function () {
     myStartPosition_x = this.el.object3D.position.x
-    //y always constant which is 1.6
     myStartPosition_z = this.el.object3D.position.z
     // `position` is a three.js Vector3. this.el is element and object3D in 3js get the position/rotation which 
     //contains x,y,z
@@ -134,3 +133,4 @@ function room(camera_forward_z,myPlane,block){
     }
     return myPlane
 }
+
