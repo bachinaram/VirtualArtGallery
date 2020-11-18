@@ -1,3 +1,21 @@
+/*AFRAME.registerComponent('clickImage', {
+  init: function () {
+    // Solution for Handling Events.
+    var sceneEl = document.querySelector('a-scene'); 
+    var boxEl = sceneEl.querySelector('a-plane')
+    boxEl.addEventListener('clickImage', function () {
+      boxEl.setAttribute('color', 'blue');  
+    });
+    boxEl.emit('foo');
+  }
+});*/
+
+AFRAME.registerComponent("clickimage", {
+  init: function() {
+  this.el.addEventListener("click", (e)=>{console.log("HELLO")})
+  }
+  });
+
 AFRAME.registerComponent('foo', {
   init: function () {
     camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7
@@ -101,9 +119,11 @@ function room(camera_forward_z,myPlane,block){
       entityEl.setAttribute('color', 'white');
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
+      entityEl.setAttribute('clickimage');
+      //entityEl.setAttribute('animation', {attribute: "scale", dur:500, direction:"alternate", from:"1 1 1", to:"3 3 3", begin:"click", repeat:1});
       sceneEl.appendChild(entityEl);
       //console.log(j)
-      //left lights
+      //left lights zoom-image //entityEl.setAttribute('animation__opacity',{ property: "components.material.material.opacity", from: 0.1, to: 1,  dur: 1500, loop: true, dir:"alternate"});
       var entityEl = document.createElement('a-entity');
       entityEl.setAttribute('gltf-model', "url(assets/images/gltf/wallight/wallight.gltf)");
       entityEl.setAttribute('position', {x: -2.55, y: 2.9, z: myPlane});
@@ -121,6 +141,7 @@ function room(camera_forward_z,myPlane,block){
       entityEl.setAttribute('color', 'white');
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
+      entityEl.setAttribute('clickimage');
       sceneEl.appendChild(entityEl);
       
       //right lights
