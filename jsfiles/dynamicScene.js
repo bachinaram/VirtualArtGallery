@@ -21,6 +21,8 @@ AFRAME.registerComponent('foo', {
     camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7
     center_z=camera_forward_z/2;
     myPlane=-9;
+    closingDoor=-4;
+    myEndWall(-10)
   }
 });
 
@@ -35,14 +37,15 @@ AFRAME.registerComponent('rotation-reader', {
     //console.log(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
     if(((myStartPosition_x<camera_right_x)&&(myStartPosition_x>camera_left_x)) && (myStartPosition_z<camera_forward_z)){
       camera_forward_z=camera_forward_z-6;
-      myPlane = room(camera_forward_z,myPlane);
+      closingDoor=closingDoor-6;
+      myPlane = room(camera_forward_z,myPlane,closingDoor);
     }
   }
 });
 
 
-function room(camera_forward_z,myPlane,block){
-  console.log(block);
+function room(camera_forward_z,myPlane,closingDoor){
+  
   var sceneEl = document.querySelector('a-scene');
   //right wall
     var entityEl = document.createElement('a-box');
@@ -106,6 +109,14 @@ function room(camera_forward_z,myPlane,block){
     entityEl2.setAttribute('position', {x: 2.55, y:0.6, z: camera_forward_z});
     sceneEl.appendChild(entityEl2);
 
+    myEndWall(closingDoor)
+    myEndWall(closingDoor-6)
+    
+    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="-1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
+    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
+    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="0 3.7 -4" width="1.6" height="1.6" depth="1" color="white"></a-plane>
+
+
     for(j=0;j<3;j++){
       myPlane=myPlane-2;
       //left planes
@@ -155,3 +166,32 @@ function room(camera_forward_z,myPlane,block){
     return myPlane
 }
 
+function myEndWall(closingDoor){
+  var sceneEl = document.querySelector('a-scene');
+  var entityEl = document.createElement('a-plane');
+    entityEl.setAttribute('material', {opacity: 0.4, transparent: "true", side: "double"});
+    entityEl.setAttribute('position', {x: -1.8, y: 2.45, z: closingDoor});
+    entityEl.setAttribute('width', '2');
+    entityEl.setAttribute('height', '4.12');
+    entityEl.setAttribute('depth', '1');
+    entityEl.setAttribute('color', 'white');
+    sceneEl.appendChild(entityEl);
+
+    var entityEl = document.createElement('a-plane');
+    entityEl.setAttribute('material', {opacity: 0.4, transparent: "true", side: "double"});
+    entityEl.setAttribute('position', {x: 1.8, y: 2.45, z: closingDoor});
+    entityEl.setAttribute('width', '2');
+    entityEl.setAttribute('height', '4.12');
+    entityEl.setAttribute('depth', '1');
+    entityEl.setAttribute('color', 'white');
+    sceneEl.appendChild(entityEl);
+
+    var entityEl = document.createElement('a-plane');
+    entityEl.setAttribute('material', {opacity: 0.4, transparent: "true", side: "double"});
+    entityEl.setAttribute('position', {x: 0, y: 3.7, z: closingDoor});
+    entityEl.setAttribute('width', '1.6');
+    entityEl.setAttribute('height', '1.6');
+    entityEl.setAttribute('depth', '1');
+    entityEl.setAttribute('color', 'white');
+    sceneEl.appendChild(entityEl);
+}
