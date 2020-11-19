@@ -12,8 +12,9 @@
 
 AFRAME.registerComponent("clickimage", {
   init: function() {
-  this.el.addEventListener("click", (e)=>{console.log("HELLO")})
-  }
+    this.el.addEventListener("click", function(evt){
+      console.log("testing string")
+    })}
   });
 
 AFRAME.registerComponent('foo', {
@@ -112,10 +113,6 @@ function room(camera_forward_z,myPlane,closingDoor){
     myEndWall(closingDoor)
     myEndWall(closingDoor-6)
     
-    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="-1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
-    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="1.8 2.45 -4" width="2" height="4.12" depth="1" color="white"></a-plane>
-    //<a-plane material="opacity: 0.4; transparent: true;side: double"  position="0 3.7 -4" width="1.6" height="1.6" depth="1" color="white"></a-plane>
-
 
     for(j=0;j<3;j++){
       myPlane=myPlane-2;
@@ -130,8 +127,15 @@ function room(camera_forward_z,myPlane,closingDoor){
       entityEl.setAttribute('color', 'white');
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
-      entityEl.setAttribute('clickimage');
-      //entityEl.setAttribute('animation', {attribute: "scale", dur:500, direction:"alternate", from:"1 1 1", to:"3 3 3", begin:"click", repeat:1});
+      entityEl.setAttribute('clickimage','');
+      entityEl.setAttribute('animation', {
+                attribute: 'scale', 
+                dur:500, 
+                direction:'alternate', 
+                from:'1 1 1', 
+                to:'3 3 3', 
+                begin:'click', 
+                repeat:1});
       sceneEl.appendChild(entityEl);
       //console.log(j)
       //left lights zoom-image //entityEl.setAttribute('animation__opacity',{ property: "components.material.material.opacity", from: 0.1, to: 1,  dur: 1500, loop: true, dir:"alternate"});
@@ -152,7 +156,16 @@ function room(camera_forward_z,myPlane,closingDoor){
       entityEl.setAttribute('color', 'white');
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
-      entityEl.setAttribute('clickimage');
+      entityEl.setAttribute('clickimage','');
+      /*
+      entityEl.setAttribute('animation', {
+        attribute: 'scale', 
+        dur:500, 
+        direction:'alternate', 
+        from:'1 1 1', 
+        to:'3 3 3', 
+        begin:'click', 
+        repeat:1});*/
       sceneEl.appendChild(entityEl);
       
       //right lights

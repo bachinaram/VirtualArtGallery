@@ -72,3 +72,5 @@ tried the code for turned rooms with api returned values (for now - hard-coded v
 32. 13/11/2020 - Dynamic room creation but the rooms are generating straight
 33. 14/11/2020 - Bug fixes to the plane entity insertion in each a-box room componentt
 34. 17/11/2020 - Dynamically able to adjust fences in each room
+35. 18/11/2020 - Dynamic animation testing
+36. 19/11/2020 - auto shaded glass creation in begining and ending of the room dynamically
