@@ -1,14 +1,3 @@
-/*AFRAME.registerComponent('clickImage', {
-  init: function () {
-    // Solution for Handling Events.
-    var sceneEl = document.querySelector('a-scene'); 
-    var boxEl = sceneEl.querySelector('a-plane')
-    boxEl.addEventListener('clickImage', function () {
-      boxEl.setAttribute('color', 'blue');  
-    });
-    boxEl.emit('foo');
-  }
-});*/
 
 AFRAME.registerComponent("clickimage", {
   init: function() {
@@ -17,7 +6,7 @@ AFRAME.registerComponent("clickimage", {
     })}
   });
 
-AFRAME.registerComponent('foo', {
+AFRAME.registerComponent('main_fun', {
   init: function () {
     camera_left_x=-2.7, camera_right_x=2.7, camera_forward_z=-7
     center_z=camera_forward_z/2;
@@ -28,7 +17,7 @@ AFRAME.registerComponent('foo', {
 });
 
 
-AFRAME.registerComponent('rotation-reader', {
+AFRAME.registerComponent('looper-rotation-reader', {
   tick: function () {
     myStartPosition_x = this.el.object3D.position.x
     myStartPosition_z = this.el.object3D.position.z
@@ -208,3 +197,4 @@ function myEndWall(closingDoor){
     entityEl.setAttribute('color', 'white');
     sceneEl.appendChild(entityEl);
 }
+
