@@ -122,7 +122,7 @@ function room(camera_forward_z,myPlane,closingDoor){
       //left planes
       var sceneEl = document.querySelector('a-scene');
       var entityEl = document.createElement('a-plane');
-      painting_no= Math.floor( Math.random() * 6);
+      painting_no= Math.floor( Math.random() * 30);
       var path=`assets/images/paint${painting_no}.jpg`;
       entityEl.setAttribute('material',  {src: `url(${path})`});
       entityEl.setAttribute('position', {x: -2.73, y: 2.3, z: myPlane});
