@@ -13,6 +13,8 @@ AFRAME.registerComponent('main_fun', {
     myPlane=-9;
     closingDoor=-4;
     myEndWall(-10)
+    // init_forward_z=-5
+    // myPlane = room(init_forward_z,myPlane,closingDoor);
   }
 });
 
@@ -25,7 +27,7 @@ AFRAME.registerComponent('looper-rotation-reader', {
     //contains x,y,z
     myStartBeta = this.el.object3D.rotation.y;
     //console.log(myStartPosition_x,myStartPosition_z,myStartBeta,myLength)
-    if(((myStartPosition_x<camera_right_x)&&(myStartPosition_x>camera_left_x)) && (myStartPosition_z<camera_forward_z)){
+    if(((myStartPosition_x<camera_right_x)&&(myStartPosition_x>camera_left_x)) && (myStartPosition_z<camera_forward_z+1.5)){
       camera_forward_z=camera_forward_z-6;
       closingDoor=closingDoor-6;
       myPlane = room(camera_forward_z,myPlane,closingDoor);
