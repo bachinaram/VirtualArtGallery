@@ -85,6 +85,18 @@ function room(camera_forward_z,myPlane,closingDoor){
     entityEl.setAttribute('scale', {x: 0.04, y: 0.04, z: 0.04});
     sceneEl.appendChild(entityEl);
     
+    
+    scene_z= Math.floor( Math.random() * 2);
+    var scene_path=`assets/images/gltf/dynamic_gltf/scene${scene_z}/scene.gltf`;
+    //scene at end of room 3d 
+    var entityEl = document.createElement('a-entity');
+    entityEl.setAttribute('gltf-model', `url(${scene_path})`);
+    entityEl.setAttribute('position', {x: -2, y: 1.5, z: camera_forward_z-1});
+    entityEl.setAttribute('rotation', {x: 0, y: 360, z: 0});
+    entityEl.setAttribute('scale', {x: 1, y: 1, z: 1});
+    sceneEl.appendChild(entityEl);
+    
+
     //security blocker to left
     var entityEl1 = document.createElement('a-entity');
     entityEl1.setAttribute('gltf-model', "url(assets/images/gltf/fence/scene.gltf)");
@@ -117,14 +129,14 @@ function room(camera_forward_z,myPlane,closingDoor){
       entityEl.setAttribute('width', '1');
       entityEl.setAttribute('height', '1');
       entityEl.setAttribute('clickimage','');
-      entityEl.setAttribute('animation', {
-                attribute: 'scale', 
-                dur:500, 
-                direction:'alternate', 
-                from:'1 1 1', 
-                to:'3 3 3', 
-                begin:'click', 
-                repeat:1});
+      // entityEl.setAttribute('animation', {
+      //           attribute: 'scale', 
+      //           dur:500, 
+      //           direction:'alternate', 
+      //           from:'1 1 1', 
+      //           to:'3 3 3', 
+      //           begin:'click', 
+      //           repeat:1});
       sceneEl.appendChild(entityEl);
       //console.log(j)
       //left lights zoom-image //entityEl.setAttribute('animation__opacity',{ property: "components.material.material.opacity", from: 0.1, to: 1,  dur: 1500, loop: true, dir:"alternate"});
