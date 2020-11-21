@@ -74,3 +74,45 @@ tried the code for turned rooms with api returned values (for now - hard-coded v
 34. 17/11/2020 - Dynamically able to adjust fences in each room
 35. 18/11/2020 - Dynamic animation testing
 36. 19/11/2020 - auto shaded glass creation in begining and ending of the room dynamically
+37. 20/11/2020 - team work on making the adding-api branch to make the turning rooms
+38. 20/11/2020 - Api working fine for next room turn with 45 degrees only one room getting created
+39. 21/11/2020 - added dynamic 3d creation in the middle of room
+40. 21/11/2020 - last minute bug fixes for straight dynamic room creation
+41. 21/11/2020 - team call with Raghav for final evaluation and project approval
+42. 21/11/2020 - adding screenshot to readme.MD
+43. 21/11/2020 - adding more images with naming picture(number) to increase random image generation accross rooms
+
+
+
+High level Project Directory Structure
+
+assets -
+	|
+	|
+	|_____audio
+	|_____Images
+cssfiles -
+	|
+	|
+	|_____home.css
+docs - 	|
+	|
+	|_____ SSD8_ProjectOutline.docx
+	|_____SSD_SSD8.pptx
+	|_____VirtualArtGalery_Startup.docx
+	|_____readme.txt 
+jsfiles - 
+	|
+	|
+	|_____camera_view.js
+	|_____dynamicScene.js
+README.md
+gallery.html
+home.html
+test.html 
+
+Project Screenshots
+![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS1.png)
+![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS2.png)
+![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS3.png)
+![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS4.png)
