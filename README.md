@@ -116,3 +116,9 @@ Project Screenshots
 ![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS2.png)
 ![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS3.png)
 ![alt text](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS4.png)
+
+
+Final project demo
+
+![alt text](https://youtu.be/qGWZj3l2aoA)
+
