@@ -119,6 +119,7 @@ Project Screenshots
 
 
 Final project demo
+https://youtu.be/qGWZj3l2aoA
 
-![alt text](https://youtu.be/qGWZj3l2aoA)
+[![Watch the video](https://github.com/bachinaram/SSD8/blob/main/assets/images/SS2.png)](https://youtu.be/qGWZj3l2aoA)
 
